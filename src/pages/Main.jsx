@@ -24,7 +24,7 @@ const Main = () => {
           <Link to="/main/dashboard" className="Dashboard">
             Dashboard
           </Link>
-          <Link to="/main/marketplace" className="Marketplace">
+          <Link to="/main/marketplace" className="Friends">
             Marketplace
           </Link>
         </div>
