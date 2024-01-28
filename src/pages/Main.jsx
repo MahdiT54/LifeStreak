@@ -2,7 +2,8 @@ import UserImage from "../assets/userimage.webp";
 import { Link, Routes, Route } from "react-router-dom";
 import Feed from "./Feed";
 import Dashboard from "./Dashboard";
-import Friends from "./Friends";
+import Friends from "./Marketplace";
+import Marketplace from "./Marketplace";
 
 const Main = () => {
   return (
@@ -23,14 +24,14 @@ const Main = () => {
           <Link to="/main/dashboard" className="Dashboard">
             Dashboard
           </Link>
-          <Link to="/main/friends" className="Friends">
+          <Link to="/main/marketplace" className="Friends">
             Friends
           </Link>
         </div>
         <Routes>
           <Route path="feed" element={<Feed />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="friends" element={<Friends />} />
+          <Route path="marketplace" element={<Marketplace />} />
         </Routes>
       </div>
     </div>
