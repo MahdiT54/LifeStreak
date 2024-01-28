@@ -432,6 +432,7 @@ GRAPHING
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 8px;
+  margin-top: 20px;
 }
 
 .marketplace__saved2 {
@@ -440,6 +441,7 @@ GRAPHING
   font-weight: 400;
   opacity: 0.5;
   text-align: center;
+  margin-bottom: 32px;
 }
 
 .marketplace__categories {
@@ -447,12 +449,14 @@ GRAPHING
   color: #000;
   font-size: 18px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .categories__row {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  margin-bottom: 8px;
 }
 
 .category__box {
@@ -465,11 +469,14 @@ GRAPHING
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
 .boxie {
   width: 40%;
+  margin-bottom: 80px;
 }
 
 .boxie__bttm {
@@ -480,4 +487,18 @@ GRAPHING
 .boxie__discount {
   border-radius: 4px;
   background: #978fed;
+  margin-left: 8px;
+  color: white;
+  width: 80px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marketplace__img {
+  width: 100%;
+  border-radius: 10px;
+  max-width: 160px;
+  max-height: 180px;
 }
