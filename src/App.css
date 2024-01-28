@@ -463,7 +463,19 @@ GRAPHING
   padding: 8px;
   border-radius: 8px;
   border: 2px solid #978fed;
+  transition: all 0.2s ease;
 }
+
+.category__box:hover {
+  background-color: #978fec;
+  color: white;
+  cursor: pointer;
+}
+
+.category__box:active {
+  scale: 0.95;
+}
+
 
 .brand__boxes {
   display: flex;
@@ -477,6 +489,11 @@ GRAPHING
 .boxie {
   width: 40%;
   margin-bottom: 80px;
+  transition: all 0.2s ease;
+}
+
+.boxie:hover {
+  scale: .98;
 }
 
 .boxie__bttm {
@@ -501,4 +518,8 @@ GRAPHING
   border-radius: 10px;
   max-width: 160px;
   max-height: 180px;
+}
+
+.marketplace__img:hover {
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.42);
 }

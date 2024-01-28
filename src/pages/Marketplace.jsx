@@ -28,21 +28,21 @@ const Marketplace = () => {
         <figure className="boxie">
           <img className="marketplace__img" src={Whoop} alt="" />
           <div className="boxie__bttm">
-            <h2 className="boxie__title">Nike</h2>
+            <h2 className="boxie__title">Whoop</h2>
             <div className="boxie__discount">15% OFF</div>
           </div>
         </figure>
         <figure className="boxie">
           <img className="marketplace__img" src={Pelton} alt="" />
           <div className="boxie__bttm">
-            <h2 className="boxie__title">Nike</h2>
+            <h2 className="boxie__title">Peloton</h2>
             <div className="boxie__discount">15% OFF</div>
           </div>
         </figure>
         <figure className="boxie">
           <img className="marketplace__img" src={Equinox} alt="" />
           <div className="boxie__bttm">
-            <h2 className="boxie__title">Nike</h2>
+            <h2 className="boxie__title">Equinox</h2>
             <div className="boxie__discount">15% OFF</div>
           </div>
         </figure>
