@@ -26,13 +26,20 @@ const Graph = () => {
   const chartInstanceRef = useRef(null);
   const [totalSaved, setTotalSaved] = useState(0);
 
+  const [data, setData] = useState([1, 3, 3, 2, 5, 1, 2, 5, 1, 2, 3, 2, 1, 1]);
+
+  const [diet, setDiet] = useState([]);
+
+  const handleDietClick = () => {
+    setData([...data, 3]);
+    setDiet([...diet,3]);
+  };
+
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
 
     // Create gradient
 
-    // Original data
-    const data = [65, 59, 80, 81, 200, 55, 40, 500, 59, 80, 301, 56, 100, 500];
 
     // Create a new array where each element is the sum of all previous elements
     const cumulativeData = data.map(
@@ -132,7 +139,7 @@ const Graph = () => {
         chartInstanceRef.current.destroy();
       }
     };
-  }, []);
+  }, [data, diet]);
 
   return (
     <>
@@ -154,31 +161,31 @@ const Graph = () => {
             <div className="category__inner">
               <img className="category__img" src={Apple} alt="" />
             </div>
-            <div className="category__value">$4,800</div>
+            <div className="category__value">${diet.reduce((a, b) => a + b, 0)}</div>
           </div>
           <div className="category">
             <div className="category__inner">
               <img className="category__img" src={Shoe} alt="" />
             </div>
-            <div className="category__value">$2,700</div>
+            <div className="category__value">$10</div>
           </div>
           <div className="category">
             <div className="category__inner">
               <img className="category__img" src={Therapy} alt="" />
             </div>
-            <div className="category__value">$250</div>
+            <div className="category__value">$10</div>
           </div>
           <div className="category">
             <div className="category__inner">
               <img className="category__img" src={Sleep} alt="" />
             </div>
-            <div className="category__value">$150</div>
+            <div className="category__value">$5</div>
           </div>
           <div className="category">
             <div className="category__inner">
               <img className="category__img" src={Apple} alt="" />
             </div>
-            <div className="category__value">$100</div>
+            <div className="category__value">$0</div>
           </div>
         </div>
       </div>
@@ -186,14 +193,14 @@ const Graph = () => {
       <div className="streaks__box">
         <h3 className="streaks__box--title">STREAKS</h3>
         <div className="streaks__box--outer">
-          <div className="streak">
+          <div className="streak" onClick={handleDietClick}>
             <div className="streak__title">DIET</div>
             <div className="streak__meter--outer">
               <div className="streak__meter"></div>
               <div className="streak__meter--level">LVL 120</div>
             </div>
             <div className="streak__points">
-              <div className="streak__points--value">650</div>
+              <div className="streak__points--value">900</div>
               <figure className="streak__points--emoji">
                 <img src={FireEmoji} alt="" />
               </figure>
@@ -203,36 +210,10 @@ const Graph = () => {
             <div className="streak__title">MOVEMENT</div>
             <div className="streak__meter--outer">
               <div className="streak__meter"></div>
-              <div className="streak__meter--level">LVL 120</div>
+              <div className="streak__meter--level">LVL 70</div>
             </div>
             <div className="streak__points">
-              <div className="streak__points--value">650</div>
-              <figure className="streak__points--emoji">
-                <img src={FireEmoji} alt="" />
-              </figure>
-            </div>
-          </div>
-          <div className="streak">
-            <div className="streak__title">SLEEP</div>
-            <div className="streak__meter--outer">
-              <div className="streak__meter"></div>
-              <div className="streak__meter--level">LVL 120</div>
-            </div>
-            <div className="streak__points">
-              <div className="streak__points--value">650</div>
-              <figure className="streak__points--emoji">
-                <img src={FireEmoji} alt="" />
-              </figure>
-            </div>
-          </div>
-          <div className="streak">
-            <div className="streak__title">HYDRATION</div>
-            <div className="streak__meter--outer">
-              <div className="streak__meter"></div>
-              <div className="streak__meter--level">LVL 120</div>
-            </div>
-            <div className="streak__points">
-              <div className="streak__points--value">650</div>
+              <div className="streak__points--value">350</div>
               <figure className="streak__points--emoji">
                 <img src={FireEmoji} alt="" />
               </figure>
@@ -242,10 +223,36 @@ const Graph = () => {
             <div className="streak__title">MENTAL HEALTH</div>
             <div className="streak__meter--outer">
               <div className="streak__meter"></div>
-              <div className="streak__meter--level">LVL 120</div>
+              <div className="streak__meter--level">LVL 60</div>
             </div>
             <div className="streak__points">
-              <div className="streak__points--value">650</div>
+              <div className="streak__points--value">300</div>
+              <figure className="streak__points--emoji">
+                <img src={FireEmoji} alt="" />
+              </figure>
+            </div>
+          </div>
+          <div className="streak">
+            <div className="streak__title">SLEEP</div>
+            <div className="streak__meter--outer">
+              <div className="streak__meter"></div>
+              <div className="streak__meter--level">LVL 100</div>
+            </div>
+            <div className="streak__points">
+              <div className="streak__points--value">700</div>
+              <figure className="streak__points--emoji">
+                <img src={FireEmoji} alt="" />
+              </figure>
+            </div>
+          </div>
+          <div className="streak">
+            <div className="streak__title">HYDRATION</div>
+            <div className="streak__meter--outer">
+              <div className="streak__meter"></div>
+              <div className="streak__meter--level">LVL 40</div>
+            </div>
+            <div className="streak__points">
+              <div className="streak__points--value">200</div>
               <figure className="streak__points--emoji">
                 <img src={FireEmoji} alt="" />
               </figure>
@@ -255,10 +262,10 @@ const Graph = () => {
             <div className="streak__title">SOCIAL</div>
             <div className="streak__meter--outer">
               <div className="streak__meter"></div>
-              <div className="streak__meter--level">LVL 120</div>
+              <div className="streak__meter--level">LVL 40</div>
             </div>
             <div className="streak__points">
-              <div className="streak__points--value">650</div>
+              <div className="streak__points--value">200</div>
               <figure className="streak__points--emoji">
                 <img src={FireEmoji} alt="" />
               </figure>
