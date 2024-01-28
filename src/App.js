@@ -1,10 +1,10 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <LoadingScreen />
     </>
   );
 }
