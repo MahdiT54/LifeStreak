@@ -324,12 +324,12 @@ GRAPHING
   background-color: #978fec;
   margin-bottom: 10px;
   cursor: pointer;
-  transition: all 0.2s ease
+  transition: all 0.2s ease;
 }
 
 .non__streak {
   background-color: white !important;
-  border: 2px solid #978FED;
+  border: 2px solid #978fed;
 }
 
 .streak:hover {
@@ -337,9 +337,8 @@ GRAPHING
 }
 
 .streak:active {
-  scale: 0.90;
+  scale: 0.9;
 }
-
 
 .streak__title {
   color: #fff;
@@ -384,8 +383,12 @@ GRAPHING
 }
 
 .regular {
-  border: 1px solid #978FED !important;
-  background: linear-gradient(270deg, rgba(249, 249, 255, 0.00) 56.35%, #978FED 86.28%) !important;
+  border: 1px solid #978fed !important;
+  background: linear-gradient(
+    270deg,
+    rgba(249, 249, 255, 0) 56.35%,
+    #978fed 86.28%
+  ) !important;
 }
 
 .black {
@@ -415,8 +418,6 @@ GRAPHING
 .streak__points--emoji {
   width: 32px;
 }
-
-
 
 .marketplace__top {
   display: flex;
@@ -476,3 +477,7 @@ GRAPHING
   align-items: center;
 }
 
+.boxie__discount {
+  border-radius: 4px;
+  background: #978fed;
+}
