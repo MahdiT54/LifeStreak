@@ -316,7 +316,7 @@ GRAPHING
 .streak {
   border-radius: 6px;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-around;
   align-items: center;
   padding: 8px;
   color: white;
@@ -325,6 +325,11 @@ GRAPHING
   margin-bottom: 10px;
   cursor: pointer;
   transition: all 0.2s ease
+}
+
+.non__streak {
+  background-color: white !important;
+  border: 2px solid #978FED;
 }
 
 .streak:hover {
@@ -341,6 +346,7 @@ GRAPHING
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1.8px;
+  margin-right: 20px;
 }
 
 .streak__meter--outer {
@@ -377,6 +383,24 @@ GRAPHING
   -webkit-text-fill-color: transparent;
 }
 
+.regular {
+  border: 1px solid #978FED !important;
+  background: linear-gradient(270deg, rgba(249, 249, 255, 0.00) 56.35%, #978FED 86.28%) !important;
+}
+
+.black {
+  color: black !important;
+}
+
+.bg__black {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  background: black;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .streak__points {
   display: flex;
   align-items: center;
@@ -391,3 +415,64 @@ GRAPHING
 .streak__points--emoji {
   width: 32px;
 }
+
+
+
+.marketplace__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.marketplace__saved {
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.marketplace__saved2 {
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.marketplace__categories {
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.categories__row {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.category__box {
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #978fed;
+}
+
+.brand__boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.boxie {
+  width: 40%;
+}
+
+.boxie__bttm {
+  display: flex;
+  align-items: center;
+}
+

@@ -26,13 +26,19 @@ const Graph = () => {
   const chartInstanceRef = useRef(null);
   const [totalSaved, setTotalSaved] = useState(0);
 
-  const [data, setData] = useState([1, 3, 3, 2, 5, 1, 2, 5, 1, 2, 3, 2, 1, 1]);
+  const [data, setData] = useState([1, 1, 3, 3, 20, 1, 5, 1, 3, 2, 10, 1]);
 
   const [diet, setDiet] = useState([]);
+  const [movement, setMovement] = useState([]);
 
   const handleDietClick = () => {
     setData([...data, 3]);
     setDiet([...diet,3]);
+  };
+
+  const handleMovementClick = () => {
+    setData([...data, 3]);
+    setMovement([...movement,4]);
   };
 
   useEffect(() => {
@@ -167,13 +173,13 @@ const Graph = () => {
             <div className="category__inner">
               <img className="category__img" src={Shoe} alt="" />
             </div>
-            <div className="category__value">$10</div>
+            <div className="category__value">${movement.reduce((a, b) => a + b, 0)}</div>
           </div>
           <div className="category">
             <div className="category__inner">
               <img className="category__img" src={Therapy} alt="" />
             </div>
-            <div className="category__value">$10</div>
+            <div className="category__value">$50</div>
           </div>
           <div className="category">
             <div className="category__inner">
@@ -206,7 +212,7 @@ const Graph = () => {
               </figure>
             </div>
           </div>
-          <div className="streak">
+          <div className="streak" onClick={handleMovementClick}>
             <div className="streak__title">MOVEMENT</div>
             <div className="streak__meter--outer">
               <div className="streak__meter"></div>
@@ -232,43 +238,34 @@ const Graph = () => {
               </figure>
             </div>
           </div>
-          <div className="streak">
-            <div className="streak__title">SLEEP</div>
+          <div className="streak non__streak">
+            <div className="streak__title black">SLEEP</div>
             <div className="streak__meter--outer">
-              <div className="streak__meter"></div>
-              <div className="streak__meter--level">LVL 100</div>
+              <div className="streak__meter regular"></div>
+              <div className="streak__meter--level black bg__black">LVL 100</div>
             </div>
             <div className="streak__points">
-              <div className="streak__points--value">700</div>
-              <figure className="streak__points--emoji">
-                <img src={FireEmoji} alt="" />
-              </figure>
+              <div className="streak__points--value black">700</div>
             </div>
           </div>
-          <div className="streak">
-            <div className="streak__title">HYDRATION</div>
+          <div className="streak non__streak">
+            <div className="streak__title black">HYDRATION</div>
             <div className="streak__meter--outer">
-              <div className="streak__meter"></div>
-              <div className="streak__meter--level">LVL 40</div>
+              <div className="streak__meter regular"></div>
+              <div className="streak__meter--level black bg__black">LVL 50</div>
             </div>
             <div className="streak__points">
-              <div className="streak__points--value">200</div>
-              <figure className="streak__points--emoji">
-                <img src={FireEmoji} alt="" />
-              </figure>
+              <div className="streak__points--value black">400</div>
             </div>
           </div>
-          <div className="streak">
-            <div className="streak__title">SOCIAL</div>
+          <div className="streak non__streak">
+            <div className="streak__title black">SOCIAL</div>
             <div className="streak__meter--outer">
-              <div className="streak__meter"></div>
-              <div className="streak__meter--level">LVL 40</div>
+              <div className="streak__meter regular"></div>
+              <div className="streak__meter--level black bg__black">LVL 20</div>
             </div>
             <div className="streak__points">
-              <div className="streak__points--value">200</div>
-              <figure className="streak__points--emoji">
-                <img src={FireEmoji} alt="" />
-              </figure>
+              <div className="streak__points--value black">200</div>
             </div>
           </div>
         </div>
